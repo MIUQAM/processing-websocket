@@ -3,15 +3,13 @@ import wsp5.*;
 WsClient client;
 
 void mousePressed(){
-	try {
-    client.send("hey?");
-  } catch ( Exception e ){
-  	println(e);
-  }
+
+  client.send("hey?");
   
 }
 
 void onWsOpen(){
+  client.send("/processing");
 }
 
 void onWsMessage( String msg ){
