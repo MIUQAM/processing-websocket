@@ -1,9 +1,12 @@
 
 void setup(){
-	WebSocketImpl.DEBUG = true;
-	new ChatClient("ws://localhost:8080");
-
 	size(100,100);
+
+	try {
+		client = new WsClient( this, "ws://localhost:8080");
+		client.connect();
+	} catch ( Exception e ){
+	}
 }
 
 void draw(){
