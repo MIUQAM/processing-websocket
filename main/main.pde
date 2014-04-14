@@ -3,7 +3,8 @@ void setup(){
 	size(100,100);
 
 	try {
-		client = new WsClient( this, "ws://localhost:8080");
+		//client = new WsClient( this, "ws://localhost:8080");
+		client = new WsClient( this, "ws://marcantoinebrodeur.com:11001");
 		client.connect();
 	} catch ( Exception e ){
 	}

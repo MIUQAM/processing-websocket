@@ -9,7 +9,7 @@ void mousePressed(){
 }
 
 void onWsOpen(){
-  client.send("/processing");
+  client.send("/iamprocessing");
 }
 
 void onWsMessage( String msg ){
