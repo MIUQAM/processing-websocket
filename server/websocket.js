@@ -51,7 +51,6 @@ wsServer.on('request', function(request) {
 
 
     connection.on('message', function(message) {
-        console.log("message entrant")
         console.log(message);
         if (message.type === 'utf8') {
             try {
@@ -62,13 +61,10 @@ wsServer.on('request', function(request) {
             }
             catch(e) {
                 // do nothing if there's an error.
-                console.log("erreur réception message");
                 //console.log(e);
             }
         }
     });
-
-    broadcast("allo");
 
 });
 
